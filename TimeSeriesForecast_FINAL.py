@@ -162,7 +162,7 @@ def ljung_box_test(residuals, lags=10):
 
 
 st.header("📌 Quick Understanding ACF & PACF for ARIMA Model Selection")
-
+with st.expander(
 st.subheader("1️⃣ What are Lags?")
 st.write("""
 - A **lag** represents a previous time step in a time series.
@@ -213,7 +213,7 @@ st.write("""
 2. **If ACF cuts off at lag 3, but PACF decays gradually → MA(3) model.**
 3. **If both ACF and PACF decay slowly, differencing (`d`) may be required.**
 """)
-
+)
 
 # Upload and analyze data
 uploaded_file = st.file_uploader("📂 Upload CSV File (Time Series Data)", type=["csv"])
