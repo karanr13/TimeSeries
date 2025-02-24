@@ -87,6 +87,8 @@ st.markdown(
     )
 
 st.markdown("This app performs advanced time series forecasting using ARIMA/SARIMA models.")
+st.markdown("Crafted By Group-A:
+Anjali Patel(934), Akash Patel(919), Chirag Vishwakarma(947), Rani Upadhyay(903), Karan Rathod(917)")
 st.header("📌 Real-Life Applications of Time Series Forecasting")
 st.write("""
 1. **Stock Market Analysis**: Investors use time series forecasting to predict stock price movements, helping them make informed decisions on buying or selling stocks.
