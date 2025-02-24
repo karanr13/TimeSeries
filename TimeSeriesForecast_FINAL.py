@@ -162,57 +162,58 @@ def ljung_box_test(residuals, lags=10):
 
 
 st.header("📌 Quick Understanding ACF & PACF for ARIMA Model Selection")
-with st.expander("📌 Understanding ACF & PACF for ARIMA", expanded=True):
-st.subheader("1️⃣ What are Lags?")
-st.write("""
-- A **lag** represents a previous time step in a time series.
-- **Lag 1** means the value from one time step before, **lag 2** means two steps before, and so on.
-- In **ACF and PACF plots**, the x-axis represents the lag number, and the y-axis represents correlation strength.
-""")
+with st.expander("📌 Quick Understanding ACF & PACF for ARIMA Model Selection", expanded=True):
+    st.subheader("1️⃣ What are Lags?")
+    st.write("""
+    - A **lag** represents a previous time step in a time series.
+    - **Lag 1** means the value from one time step before, **lag 2** means two steps before, and so on.
+    - In **ACF and PACF plots**, the x-axis represents the lag number, and the y-axis represents correlation strength.
+    """)
 
-st.subheader("2️⃣ How to Use ACF & PACF to Select ARIMA Parameters?")
-st.write("""
-ARIMA consists of three components:
-- **p (Autoregressive Order - AR)**
-- **d (Differencing Order)**
-- **q (Moving Average Order - MA)**
-""")
+    st.subheader("2️⃣ How to Use ACF & PACF to Select ARIMA Parameters?")
+    st.write("""
+    ARIMA consists of three components:
+    - **p (Autoregressive Order - AR)**
+    - **d (Differencing Order)**
+    - **q (Moving Average Order - MA)**
+    """)
 
-st.subheader("🔹 ACF (Autocorrelation Function) – Determines `q` (MA Order)")
-st.write("""
-- ACF measures how current values relate to past values.
-- If **ACF drops off sharply after a few lags**, it suggests an **MA(q) model**.
-- If **ACF decreases slowly (gradual decay)**, then the series might need **differencing (`d`)** before selecting `q`.
+    st.subheader("🔹 ACF (Autocorrelation Function) – Determines `q` (MA Order)")
+    st.write("""
+    - ACF measures how current values relate to past values.
+    - If **ACF drops off sharply after a few lags**, it suggests an **MA(q) model**.
+    - If **ACF decreases slowly (gradual decay)**, then the series might need **differencing (`d`)** before selecting `q`.
 
-**MA Process (Moving Average):**
-- If ACF **cuts off** after a certain lag (`q`) and becomes insignificant → Choose that lag as `q`.
-""")
+    **MA Process (Moving Average):**
+    - If ACF **cuts off** after a certain lag (`q`) and becomes insignificant → Choose that lag as `q`.
+    """)
 
-st.subheader("🔹 PACF (Partial Autocorrelation Function) – Determines `p` (AR Order)")
-st.write("""
-- PACF removes the influence of intermediate lags and shows only the direct correlation.
-- If PACF **cuts off sharply** after a few lags → suggests an **AR(p) model**.
-- If PACF shows a slow decay → differencing may be needed (`d`).
+    st.subheader("🔹 PACF (Partial Autocorrelation Function) – Determines `p` (AR Order)")
+    st.write("""
+    - PACF removes the influence of intermediate lags and shows only the direct correlation.
+    - If PACF **cuts off sharply** after a few lags → suggests an **AR(p) model**.
+    - If PACF shows a slow decay → differencing may be needed (`d`).
 
-**AR Process (Autoregressive):**
-- If PACF **cuts off** at a certain lag (`p`) and becomes insignificant → Choose that lag as `p`.
-""")
+    **AR Process (Autoregressive):**
+    - If PACF **cuts off** at a certain lag (`p`) and becomes insignificant → Choose that lag as `p`.
+    """)
 
-st.subheader("📊 How to Select (p, q) from the Graphs?")
-st.write("""
-| Scenario | ACF Behavior | PACF Behavior | Suggested Model |
-|----------|-------------|--------------|----------------|
-| AR Model (p) | ACF decays gradually | PACF cuts off at lag p | AR(p) |
-| MA Model (q) | ACF cuts off at lag q | PACF decays gradually | MA(q) |
-| ARMA Model (p, q) | ACF decays gradually | PACF decays gradually | ARMA(p, q) |
-""")
+    st.subheader("📊 How to Select (p, q) from the Graphs?")
+    st.write("""
+    | Scenario | ACF Behavior | PACF Behavior | Suggested Model |
+    |----------|-------------|--------------|----------------|
+    | AR Model (p) | ACF decays gradually | PACF cuts off at lag p | AR(p) |
+    | MA Model (q) | ACF cuts off at lag q | PACF decays gradually | MA(q) |
+    | ARMA Model (p, q) | ACF decays gradually | PACF decays gradually | ARMA(p, q) |
+    """)
 
-st.subheader("🔍 Example Interpretation")
-st.write("""
-1. **If PACF cuts off at lag 2, but ACF decays gradually → AR(2) model.**
-2. **If ACF cuts off at lag 3, but PACF decays gradually → MA(3) model.**
-3. **If both ACF and PACF decay slowly, differencing (`d`) may be required.**
-""")
+    st.subheader("🔍 Example Interpretation")
+    st.write("""
+    1. **If PACF cuts off at lag 2, but ACF decays gradually → AR(2) model.**
+    2. **If ACF cuts off at lag 3, but PACF decays gradually → MA(3) model.**
+    3. **If both ACF and PACF decay slowly, differencing (`d`) may be required.**
+    """)
+
 
 
 # Upload and analyze data
