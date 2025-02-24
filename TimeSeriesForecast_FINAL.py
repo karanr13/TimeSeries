@@ -17,11 +17,11 @@ st.set_page_config(page_title="Time Series Forecasting", layout="wide")
 st.title("Time Series Forecasting & Analysis")
 st.markdown("This app performs advanced time series forecasting using ARIMA/SARIMA models.")
 st.write("""
-**Crafted By Group-A:**/n
-**Anjali Patel(934)**/n
-**Akash Patel(919)**/n
-**Chirag Vishwakarma(947)**/n 
-**Rani Upadhyay(903)**/n
+**Crafted By Group-A:**\n
+**Anjali Patel(934)**\n
+**Akash Patel(919)**\n
+**Chirag Vishwakarma(947)**\n 
+**Rani Upadhyay(903)**\n
 **Karan Rathod(917)**
 """)
 st.image("https://www.investopedia.com/thmb/IEG4YEY-j4PXx1U3TyyHU0YEq88=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TermDefinitions_TimeSeries__V1_CT-e4cb9fe23caf415491b1e850a1be300b.png", width=1000)
