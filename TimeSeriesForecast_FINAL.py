@@ -15,6 +15,15 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error
 
 st.set_page_config(page_title="Time Series Forecasting", layout="wide")
 st.title("Time Series Forecasting & Analysis")
+st.markdown("This app performs advanced time series forecasting using ARIMA/SARIMA models.")
+st.write("""
+**Crafted By Group-A:**,
+**Anjali Patel(934)**,
+**Akash Patel(919)**,
+**Chirag Vishwakarma(947)**, 
+**Rani Upadhyay(903)**,
+**Karan Rathod(917)**
+""")
 st.image("https://www.investopedia.com/thmb/IEG4YEY-j4PXx1U3TyyHU0YEq88=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TermDefinitions_TimeSeries__V1_CT-e4cb9fe23caf415491b1e850a1be300b.png", width=1000)
 st.markdown(
     """
@@ -86,23 +95,6 @@ st.markdown(
     unsafe_allow_html=True
     )
 
-st.markdown("This app performs advanced time series forecasting using ARIMA/SARIMA models.")
-st.write("""
-**Crafted By Group-A:**
-Anjali Patel(934)
-Akash Patel(919) 
-Chirag Vishwakarma(947) 
-Rani Upadhyay(903)
-Karan Rathod(917)
-""")
-
-st.header("📌 Real-Life Applications of Time Series Forecasting")
-st.write("""
-1. **Stock Market Analysis**: Investors use time series forecasting to predict stock price movements, helping them make informed decisions on buying or selling stocks.
-2. **Weather Forecasting**: Meteorologists analyze past temperature, humidity, and pressure trends to make short- and long-term weather predictions.
-3. **Sales & Demand Forecasting**: Businesses use historical sales data to forecast demand, helping with inventory management and supply chain optimization.
-4. **Healthcare & Disease Prediction**: Hospitals and governments analyze disease trends to predict outbreaks, enabling better resource allocation and policy-making.
-""")
 # Introduction to Time Series Data
 st.write("""
 ### Understanding Time Series Data
@@ -323,6 +315,13 @@ if uploaded_file:
         st.write(f"RMSE: {rmse} (Lower is better)")
         st.write(f"MAE: {mae} (Lower is better)")
 
+st.header("📌 Real-Life Applications of Time Series Forecasting")
+st.write("""
+1. **Stock Market Analysis**: Investors use time series forecasting to predict stock price movements, helping them make informed decisions on buying or selling stocks.
+2. **Weather Forecasting**: Meteorologists analyze past temperature, humidity, and pressure trends to make short- and long-term weather predictions.
+3. **Sales & Demand Forecasting**: Businesses use historical sales data to forecast demand, helping with inventory management and supply chain optimization.
+4. **Healthcare & Disease Prediction**: Hospitals and governments analyze disease trends to predict outbreaks, enabling better resource allocation and policy-making.
+""")
 # Next Steps Section
 st.header("📍 Next Steps")
 st.write("""
