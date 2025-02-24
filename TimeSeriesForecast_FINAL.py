@@ -18,11 +18,9 @@ st.title("Time Series Forecasting & Analysis")
 st.markdown("This app performs advanced time series forecasting using ARIMA/SARIMA models.")
 st.write("""
 **Crafted By Group-A:**\n
-**Anjali Patel(934)**\n
-**Akash Patel(919)**\n
-**Chirag Vishwakarma(947)**\n 
-**Rani Upadhyay(903)**\n
-**Karan Rathod(917)**
+Anjali Patel(934), Rani Upadhyay(903)\n
+Akash Patel(919), Chirag Vishwakarma(947)\n
+Karan Rathod(917)
 """)
 st.image("https://www.investopedia.com/thmb/IEG4YEY-j4PXx1U3TyyHU0YEq88=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TermDefinitions_TimeSeries__V1_CT-e4cb9fe23caf415491b1e850a1be300b.png", width=1000)
 st.markdown(
@@ -163,7 +161,7 @@ def ljung_box_test(residuals, lags=10):
         st.write("**Decision:** Fail to reject H₀. Residuals are white noise, indicating a good model fit.")
 
 
-st.header("📌 Understanding ACF & PACF for ARIMA Model Selection")
+st.header("📌 Quick Understanding ACF & PACF for ARIMA Model Selection")
 
 st.subheader("1️⃣ What are Lags?")
 st.write("""
@@ -215,16 +213,6 @@ st.write("""
 2. **If ACF cuts off at lag 3, but PACF decays gradually → MA(3) model.**
 3. **If both ACF and PACF decay slowly, differencing (`d`) may be required.**
 """)
-
-st.subheader("📌 Graphs to Identify AR and MA")
-st.write("""
-- **AR Model** → Look at **PACF** for `p`.
-- **MA Model** → Look at **ACF** for `q`.
-- **If neither ACF nor PACF cuts off immediately**, apply **differencing (d)**.
-
-🔹 After choosing (p, d, q), apply **ARIMA(p, d, q)** for forecasting.
-""")
-
 
 
 # Upload and analyze data
