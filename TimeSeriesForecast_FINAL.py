@@ -162,7 +162,7 @@ def ljung_box_test(residuals, lags=10):
 
 
 st.header("📌 Quick Understanding ACF & PACF for ARIMA Model Selection")
-with st.expander("📌 Quick Understanding ACF & PACF for ARIMA Model Selection", expanded=True):
+with st.expander("Click to see Guide", expanded=True):
     st.subheader("1️⃣ What are Lags?")
     st.write("""
     - A **lag** represents a previous time step in a time series.
