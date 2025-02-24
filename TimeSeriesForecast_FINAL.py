@@ -110,11 +110,6 @@ A good time series dataset should:
 - Contain **enough data points** to capture meaningful patterns.
 - Be checked for **missing values** and handled appropriately.
 
-Common Applications:
-- **Stock Market Analysis**
-- **Weather Forecasting**
-- **Economic Trends & GDP Analysis**
-- **Sales Predictions**
 """)
 
 # Function to check if data is a time series
