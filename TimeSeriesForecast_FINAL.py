@@ -304,18 +304,34 @@ if uploaded_file:
         st.write(f"RMSE: {rmse} (Lower is better)")
         st.write(f"MAE: {mae} (Lower is better)")
 
-st.header("📌 Real-Life Applications of Time Series Forecasting")
-st.write("""
-1. **Stock Market Analysis**: Investors use time series forecasting to predict stock price movements, helping them make informed decisions on buying or selling stocks.
-2. **Weather Forecasting**: Meteorologists analyze past temperature, humidity, and pressure trends to make short- and long-term weather predictions.
-3. **Sales & Demand Forecasting**: Businesses use historical sales data to forecast demand, helping with inventory management and supply chain optimization.
-4. **Healthcare & Disease Prediction**: Hospitals and governments analyze disease trends to predict outbreaks, enabling better resource allocation and policy-making.
-""")
-# Next Steps Section
-st.header("📍 Next Steps")
-st.write("""
-- **Further Model Tuning**: Experiment with different parameters and seasonal adjustments.
-- **Feature Engineering**: Include external factors such as economic indicators, holidays, or weather data.
-- **Deploying the Model**: Use the trained model in production for real-time forecasting.
-- **Automating Forecasting**: Schedule periodic data updates and automatic retraining.
-""")
+with st.expander("🌍 Real-Life Applications & Next Steps in Time Series Forecasting", expanded=True):
+    st.subheader("Real-Life Applications of Time Series Forecasting")
+    st.write("""
+    1. 💰 **Stock Market Analysis**  
+       - Investors use time series forecasting to predict stock price movements, helping them make informed decisions on buying or selling stocks.
+    
+    2. ☁️ **Weather Forecasting**  
+       - Meteorologists analyze past temperature, humidity, and pressure trends to make short- and long-term weather predictions.
+    
+    3. 🏪 **Sales & Demand Forecasting**  
+       - Businesses use historical sales data to forecast demand, helping with inventory management and supply chain optimization.
+    
+    4. 🏥 **Healthcare & Disease Prediction**  
+       - Hospitals and governments analyze disease trends to predict outbreaks, enabling better resource allocation and policy-making.
+    """)
+
+    st.subheader("🚀 Next Steps")
+    st.write("""
+    🔹 **Further Model Tuning**  
+    - Experiment with different parameters and seasonal adjustments.
+    
+    🔹 **Feature Engineering**  
+    - Include external factors such as economic indicators, holidays, or weather data.
+    
+    🔹 **Deploying the Model**  
+    - Use the trained model in production for real-time forecasting.
+    
+    🔹 **Automating Forecasting**  
+    - Schedule periodic data updates and automatic retraining.
+    """)
+
